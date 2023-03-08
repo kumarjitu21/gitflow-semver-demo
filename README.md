@@ -1,4 +1,4 @@
-# gitflow-semver-demo
+# Gitflow Semver Demo
 Example workflow for automatic semantic versioning with gitflow.
 
 ## Installation of git-flow
@@ -28,5 +28,3 @@ git flow feature pull featureName
 ```sh
 git flow feature finish featureName
 ```
-
-
