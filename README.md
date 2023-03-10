@@ -29,4 +29,22 @@ git flow feature pull featureName
 git flow feature finish featureName
 ```
 
-# test feature
+### Create Release Candidate
+```sh
+$ git flow release start 1.0.1
+```
+The Above commands will trigger the below actions:
+- A new branch 'release/1.0.1' was created, based on 'develop'
+- You are now on branch 'release/1.0.1'
+### Finish the Release Candidate
+```sh
+$ git flow release finish 1.0.1
+```
+The Above commands will trigger the below actions:
+- Release branch 'release/1.0.1' has been merged into 'main'
+- The release was tagged '1.0.1'
+- Release tag '1.0.1' has been back-merged into 'develop'
+- Release branch 'release/1.0.1' has been locally deleted; it has been remotely deleted from 'origin'
+- You are now on branch 'develop'
+
+Once release flow finish, Push the changes in local to remote, that includes git push from develop as well as main and then push the recently created git tags.
